@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Measurements Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #avatar-container {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            border: 1px solid #ddd; /* Optional styling */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Body Measurements Form</h1>
+        <form id="bodyMeasurementsForm" action="/submit-measurements" method="POST">
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+
+            <label for="chest">Chest (cm):</label>
+            <input type="number" id="chest" name="chest" required>
+
+            <label for="waist">Waist (cm):</label>
+            <input type="number" id="waist" name="waist" required>
+
+            <label for="hip">Hip (cm):</label>
+            <input type="number" id="hip" name="hip" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Placeholder for 3D Avatar -->
+    <div id="avatar-container"></div>
+
+    <script src="./node_modules/three/build/three.js"></script>
+
+<!-- Your Script for 3D Avatar -->
+<script src="scripts/avatar.js"></script>
+
+</body>
+</html>
